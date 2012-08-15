@@ -1,0 +1,27 @@
+[user]
+  name = Nick Rowe
+  email = nixterrimus@dcxn.com
+[core]
+  excludesfile = /Users/nicholasrowe/.gitignore_global
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+[alias]
+  br = branch
+  bra = branch -a
+  ci = commit
+  co = checkout
+  cp = cherry-pick
+  dc = diff --cached
+  di = diff
+  g = log --pretty=format:\"%h %an - %s\" --graph
+  gg = log --pretty=format:\"%H %an - %s\" --graph
+  lc = log ORIG_HEAD.. --stat --no-merges
+  lg = log --oneline
+  ll = log --pretty=format:'%Cred%h %Cblue%an %Cgreen%s / %Cblue%ar%Creset' --abbrev-commit -n15
+  pr = pull --rebase
+  st = status
+  s = status --short
+  w = whatchanged
+
+
