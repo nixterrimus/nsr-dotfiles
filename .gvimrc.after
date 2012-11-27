@@ -1,6 +1,10 @@
-set background=light
+set background=dark
 colorscheme solarized
 set guioptions-=T         " Remove toolbar
 set guioptions-=L
 set guioptions-=r         " Remove right scrollbar
-set guifont=Inconsolata:h13
+set guifont=Inconsolata:h14
+set autoread
+
+let g:vimroom_guibackground = "#fdf6e3"
+nmap <C-t> :CtrlPTag<cr>
