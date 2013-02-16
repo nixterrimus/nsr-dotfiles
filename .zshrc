@@ -27,20 +27,22 @@ ZSH_THEME="frisk"
 COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-#plugins=(git brew)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:/usr/local/Cellar/android-sdk/r21/tools/:/usr/local/Cellar/android-sdk/r21/platform-tools/
+export PATH=$PATH:/usr/local/share/python/
+export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
-export PATH=/opt/local/bin:/usr/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/local/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/share/aclocal
-export PATH=$PATH:~/.scripts
-# magick binary install
-export MAGICK_HOME="$HOME/.magick"
-export PATH="$MAGICK_HOME/bin:$PATH"
-export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
-export PATH=$PATH:~/.rbenv/shims
+#rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+. ~/.nvm/nvm.sh
 
 eval "$(rbenv init - --no-rehash)"
 
