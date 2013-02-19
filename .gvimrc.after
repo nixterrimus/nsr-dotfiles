@@ -1,10 +1,19 @@
-set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night-Eighties
+
 set guioptions-=T         " Remove toolbar
 set guioptions-=L
 set guioptions-=r         " Remove right scrollbar
-set guifont=Inconsolata:h14
+set guifont=Inconsolata\ For\ Powerline:h14
 set autoread
+hi NonText guifg=bg
+
+set vb
 
 let g:vimroom_guibackground = "#fdf6e3"
 nmap <C-t> :CtrlPTag<cr>
+
+
+let NERDTreeMinimalUI = 1
+let g:Powerline_symbols = 'fancy'
+
+let g:gist_open_browser_after_post = 1
