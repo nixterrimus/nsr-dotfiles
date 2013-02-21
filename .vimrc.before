@@ -1,2 +1,26 @@
 let g:Powerline_symbols = 'fancy' 
 set t_Co=256
+
+nmap <CR> :write<CR>
+
+"move up and down by visible line rather than true line
+:nmap j gj
+:nmap k gk
+
+:set incsearch
+:set ignorecase
+:set smartcase
+:set hlsearch
+:nmap \q :nohlsearch<CR>
+
+:set mouse=a
+
+
+"FOLDING
+"nnoremap <space> za
+"vnoremap <space> zf
+
+"set foldmethod=syntax
+"set foldnestmax=2
+"set foldlevelstart=20
+
