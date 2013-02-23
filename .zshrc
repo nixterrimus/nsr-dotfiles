@@ -49,3 +49,6 @@ alias today='~/Code/gcalcli/gcalcli --ignore-started --cal "Rowe" --detail-locat
 alias check-mail='/usr/local/share/python/offlineimap -o -q -u quiet && mutt'
 
 export LC_ALL="en_US.UTF-8"
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+export EDITOR='vim'
