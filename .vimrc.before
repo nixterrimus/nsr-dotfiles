@@ -3,6 +3,13 @@ set t_Co=256
 
 nmap <CR> :write<CR>
 
+
+set autoread
+
+hi NonText guifg=bg
+let NERDTreeMinimalUI = 1
+
+
 "move up and down by visible line rather than true line
 :nmap j gj
 :nmap k gk
