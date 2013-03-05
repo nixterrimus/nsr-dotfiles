@@ -22,6 +22,16 @@ let NERDTreeMinimalUI = 1
 
 :set mouse=a
 
+func! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  setlocal wrap
+  setlocal nolist
+  setlocal lbr
+  setlocal linebreak
+endfu
+com! WP call WordProcessorMode()
+
 
 "FOLDING
 "nnoremap <space> za
