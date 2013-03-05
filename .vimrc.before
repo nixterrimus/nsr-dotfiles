@@ -6,7 +6,6 @@ nmap <CR> :write<CR>
 
 set autoread
 
-hi NonText guifg=bg
 let NERDTreeMinimalUI = 1
 
 

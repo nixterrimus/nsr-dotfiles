@@ -5,7 +5,6 @@ set guioptions-=L
 set guioptions-=r         " Remove right scrollbar
 set guifont=Inconsolata\ For\ Powerline:h14
 set autoread
-hi NonText guifg=bg
 
 set vb
 
@@ -14,6 +13,7 @@ nmap <C-t> :CtrlPTag<cr>
 
 
 let NERDTreeMinimalUI = 1
+hi NonText guifg=bg
 let g:Powerline_symbols = 'fancy'
 
 let g:gist_open_browser_after_post = 1
