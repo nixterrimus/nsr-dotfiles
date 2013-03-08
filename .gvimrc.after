@@ -14,6 +14,7 @@ nmap <C-t> :CtrlPTag<cr>
 
 let NERDTreeMinimalUI = 1
 hi NonText guifg=bg
+highlight clear SignColumn
 let g:Powerline_symbols = 'fancy'
 
 let g:gist_open_browser_after_post = 1
