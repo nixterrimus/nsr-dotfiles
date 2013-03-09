@@ -8,9 +8,7 @@ set autoread
 
 set vb
 
-let g:vimroom_guibackground = "#fdf6e3"
 nmap <C-t> :CtrlPTag<cr>
-
 
 let NERDTreeMinimalUI = 1
 hi NonText guifg=bg
