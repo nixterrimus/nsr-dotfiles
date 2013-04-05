@@ -51,8 +51,7 @@ function current_branch() {
 alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
 #rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-. ~/.nvm/nvm.sh
+eval "$(rbenv init -)"
 
 alias slow='sudo /usr/local/Cellar/iftop/1.0pre2/sbin/iftop -i en1 -b'
 alias today='~/Code/gcalcli/gcalcli --ignore-started --cal "Rowe" --detail-location agenda'
