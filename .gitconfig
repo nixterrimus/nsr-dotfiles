@@ -7,23 +7,10 @@
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path = 
 [alias]
-  br = branch
-  bra = branch -a
-  ci = commit
   co = checkout
-  cp = cherry-pick
-  dc = diff --cached
-  di = diff
-  g = log --pretty=format:\"%h %an - %s\" --graph
-  gg = log --pretty=format:\"%H %an - %s\" --graph
-  lc = log ORIG_HEAD.. --stat --no-merges
-  lg = log --oneline
-  ll = log --pretty=format:'%Cred%h %Cblue%an %Cgreen%s / %Cblue%ar%Creset' --abbrev-commit -n15
-  pr = pull --rebase
   st = status
-  s = status --short
-  w = whatchanged
   recent = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)!%(authorname)!%(committerdate:short)' | rs -zc! 15 3
+  changed = whatchanged --abbrev-commit --pretty=format:'%h %cn: %s'
 
 [log]
   abbrevCommit = true
