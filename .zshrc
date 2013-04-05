@@ -41,6 +41,15 @@ export PATH=$PATH:/usr/local/share/python
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
+# Git Helpers
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
+alias gpull='git pull origin $(current_branch)'
+alias gpush='git push origin $(current_branch)'
 #rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 . ~/.nvm/nvm.sh
