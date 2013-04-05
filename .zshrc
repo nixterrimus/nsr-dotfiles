@@ -49,6 +49,12 @@ function current_branch() {
 
 alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
+
+
+# FASD, get around the system faster
+eval "$(fasd --init posix-alias zsh-hook zsh-wcomp zsh-ccomp zsh-ccomp-install)"
+alias j='fasd_cd -d'     # autojump style jumps
+
 #rbenv
 eval "$(rbenv init -)"
 
