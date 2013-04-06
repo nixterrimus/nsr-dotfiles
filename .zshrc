@@ -65,4 +65,7 @@ alias today='~/Code/gcalcli/gcalcli --ignore-started --cal "Rowe" --detail-locat
 alias check-mail='/usr/local/share/python/offlineimap -o -q -u quiet && mutt'
 alias song='youtube-dl --extract-audio --audio-format=mp3 -t'
 
-export EDITOR='vim'
+export EDITOR='mvim'
+
+# Edit Quickly
+alias e='$EDITOR .'
