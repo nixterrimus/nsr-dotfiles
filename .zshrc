@@ -57,6 +57,9 @@ cdpath=( ~ ~/Code ~/workspace )
 eval "$(fasd --init posix-alias zsh-hook zsh-wcomp zsh-ccomp zsh-ccomp-install)"
 alias j='fasd_cd -d'     # autojump style jumps
 
+# Useful
+mcd () { mkdir -p "$@" && cd "$@"; }
+
 #rbenv
 eval "$(rbenv init -)"
 
