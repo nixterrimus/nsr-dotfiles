@@ -6,7 +6,9 @@ set guioptions-=r         " Remove right scrollbar
 set guifont=Inconsolata\ For\ Powerline:h14
 set autoread
 
+" Set Visual & Remove flash
 set vb
+set t_vb=
 
 let g:vimroom_guibackground = "#fdf6e3"
 nmap <C-t> :CtrlPTag<cr>
