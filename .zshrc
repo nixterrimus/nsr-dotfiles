@@ -24,6 +24,7 @@ function current_branch() {
 
 alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
+alias gmerge='git co master; git pull origin master; git co -; git merge master'
 
 # Oh the places I go, these get added to the places I can cd into quickly
 cdpath=( ~ ~/Code ~/workspace )
