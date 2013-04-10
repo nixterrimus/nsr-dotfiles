@@ -22,6 +22,7 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+# Git aliases
 alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
 alias gmerge='git co master; git pull origin master; git co -; git merge master'
