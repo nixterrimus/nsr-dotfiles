@@ -27,6 +27,11 @@ alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
 alias gmerge='git co master; git pull origin master; git co -; git merge master'
 
+# Analytics monitoring
+#   Captures analytics traffic as it moves across the network
+alias ga-monitor="sudo tshark -R 'http.request.full_uri matches \"utm\.gif\"' -T fields -e http.request.full_uri -i en1"
+alias om-monitor="sudo tshark -R 'http.request.full_uri matches \"metric\.modcloth\.com\"' -T fields -e http.request.full_uri -i en1"
+
 # Oh the places I go, these get added to the places I can cd into quickly
 cdpath=( ~ ~/Code ~/workspace )
 
