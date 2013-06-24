@@ -1,0 +1,42 @@
+let g:Powerline_symbols = 'fancy' 
+set t_Co=256
+
+nmap <CR> :write<CR>
+
+
+set autoread
+
+let NERDTreeMinimalUI = 1
+
+
+"move up and down by visible line rather than true line
+:nmap j gj
+:nmap k gk
+
+:set incsearch
+:set ignorecase
+:set smartcase
+:set hlsearch
+:nmap \q :nohlsearch<CR>
+
+:set mouse=a
+
+func! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  setlocal wrap
+  setlocal nolist
+  setlocal lbr
+  setlocal linebreak
+endfu
+com! WP call WordProcessorMode()
+
+
+"FOLDING
+"nnoremap <space> za
+"vnoremap <space> zf
+
+"set foldmethod=syntax
+"set foldnestmax=2
+"set foldlevelstart=20
+
