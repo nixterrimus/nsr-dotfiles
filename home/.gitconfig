@@ -3,6 +3,7 @@
 	email = nixterrimus@dcxn.com
 [core]
   excludesfile = /Users/nicholasrowe/.gitignore_global
+	editor = vim
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path = 

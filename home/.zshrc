@@ -66,9 +66,6 @@ alias om-monitor="sudo tshark -R 'http.request.full_uri matches \"metric\.modclo
 alias wifi-random='sudo spoof-mac randomize wi-fi && spoof-mac list'
 alias wifi-become='sudo spoof-mac set'
 
-# Oh the places I go, these get added to the places I can cd into quickly
-cdpath=( ~ ~/Code ~/workspace )
-
 # FASD, get around the system faster
 eval "$(fasd --init posix-alias zsh-hook zsh-wcomp zsh-ccomp zsh-ccomp-install)"
 alias j='fasd_cd -d'     # autojump style jumps
