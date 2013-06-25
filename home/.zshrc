@@ -80,6 +80,7 @@ alias slow='sudo /usr/local/Cellar/iftop/1.0pre2/sbin/iftop -i en1 -b'
 alias today='~/Code/gcalcli/gcalcli --ignore-started --cal "Rowe" --detail-location agenda'
 alias check-mail='/usr/local/share/python/offlineimap -o -q -u quiet && mutt'
 alias song='youtube-dl --extract-audio --audio-format=mp3 -t'
+alias cask="brew cask"
 
 export EDITOR='mvim'
 
