@@ -5,7 +5,7 @@ ZSH_THEME="nixterrimus"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(brew nyan vi-mode bundler tmux)
+plugins=(brew nyan vi-mode bundler)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,14 +67,18 @@ alias wifi-random='sudo spoof-mac randomize wi-fi && spoof-mac list'
 alias wifi-become='sudo spoof-mac set'
 
 # FASD, get around the system faster
-eval "$(fasd --init posix-alias zsh-hook zsh-wcomp zsh-ccomp zsh-ccomp-install)"
-alias j='fasd_cd -d'     # autojump style jumps
+if type fasd >/dev/null 2>&1; then
+  eval "$(fasd --init posix-alias zsh-hook zsh-wcomp zsh-ccomp zsh-ccomp-install)"
+  alias j='fasd_cd -d'     # autojump style jumps
+fi
 
 # Useful
 mcd () { mkdir -p "$@" && cd "$@"; }
 
 #rbenv
-eval "$(rbenv init -)"
+if type rbenv >/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
 
 alias slow='sudo /usr/local/Cellar/iftop/1.0pre2/sbin/iftop -i en1 -b'
 alias today='~/Code/gcalcli/gcalcli --ignore-started --cal "Rowe" --detail-location agenda'
