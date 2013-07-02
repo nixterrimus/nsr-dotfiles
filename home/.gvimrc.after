@@ -1,5 +1,5 @@
-colorscheme Tomorrow-Night-Eighties
 
+colorscheme tomorrow-night-eighties
 set guioptions-=T         " Remove toolbar
 set guioptions-=L
 set guioptions-=r         " Remove right scrollbar
