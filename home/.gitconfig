@@ -19,5 +19,3 @@
 	tool = opendiff
 [github]
 	user = nixterrimus
-[push]
-	default = simple
