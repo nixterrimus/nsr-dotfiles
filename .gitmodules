@@ -7,3 +7,6 @@
 [submodule "home/.tmux/tmux-powerline"]
 	path = home/.tmux/tmux-powerline
 	url = git://github.com/erikw/tmux-powerline.git
+[submodule "home/.janus/vim-powerline"]
+	path = home/.janus/vim-powerline
+	url = git@github.com:Lokaltog/vim-powerline.git
