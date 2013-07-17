@@ -23,6 +23,9 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+# Ack grep is ack
+alias ack="ack-grep"
+
 # Git aliases
 alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
