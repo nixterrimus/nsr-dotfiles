@@ -3,7 +3,6 @@ set t_Co=256
 
 nmap <CR> :write<CR>
 
-
 set autoread
 
 let NERDTreeMinimalUI = 1
@@ -36,6 +35,9 @@ func! WordProcessorMode()
 endfu
 com! WP call WordProcessorMode()
 
+func! FormatJSON()
+  :%!python -m json.tool
+endfu
 
 "FOLDING
 "nnoremap <space> za
