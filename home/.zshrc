@@ -68,6 +68,7 @@ alias om-monitor="sudo tshark -R 'http.request.full_uri matches \"metric\.modclo
 # Net testing
 alias wifi-random='sudo spoof-mac randomize wi-fi && spoof-mac list'
 alias wifi-become='sudo spoof-mac set'
+alias rails-scan='nmap -Pn -p 3000 --open'
 
 # FASD, get around the system faster
 if type fasd >/dev/null 2>&1; then
