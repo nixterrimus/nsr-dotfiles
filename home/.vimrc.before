@@ -19,6 +19,11 @@ let NERDTreeMinimalUI = 1
 :set hlsearch
 :nmap \q :nohlsearch<CR>
 
+" Swap files were causing all kinds of annoying "You already have this open
+" messages".  I haven't found swapfiles to be helpful so I totally disable
+" them.
+:set noswapfile
+
 :set mouse=a
 
 func! WordProcessorMode()
