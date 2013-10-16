@@ -23,7 +23,8 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
-# Ack grep is ack
+# Searching
+alias ag="nocorrect ag"
 alias ack="ag"
 
 # Git aliases
