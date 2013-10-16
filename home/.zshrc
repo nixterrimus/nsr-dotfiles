@@ -9,7 +9,7 @@ plugins=(brew nyan bundler)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/usr/local/Cellar/android-sdk/r21/tools:/usr/local/Cellar/android-sdk/r21/platform-tools
 export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/local/share/npm/bin/
