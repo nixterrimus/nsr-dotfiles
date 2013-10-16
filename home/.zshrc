@@ -52,6 +52,7 @@ function git-stats-lines-removed { git log --all --numstat --format="%n" --autho
 function git-stats-files-changed { git log --all --numstat --format="%n" --author="$1" | grep -v -e "^$" | cut -f3 | sort -iu | wc -l }
 
 function git-report { echo "Total Commits: `git-total-commits $1` / `git-total-commits`\nLines Added: \t`git-stats-lines-added $1`\nLines Removed: \t`git-stats-lines-removed $1`\nFiles Changed: `git-stats-files-changed $1`\n\nPairing:\n`git-pair-stats $1`\n\nWeekending:\n`git-log-weekender $1 | git-scoreboard`\n\nExtracurricular:\n`git-log-extracurricular $1 | git-scoreboard`" }
+function git-total-contributors { git shortlog -sn | cut -f2 | while read -d , i; do echo "$i"; done | while read -d \& i; do echo "$i"; done | tr '[A-Z]' '[a-z]' | tr -d ' ' | sort | uniq | wc -l }
 
 # Return a list of who is pairing with who, takes an argument to filter a specific person
 #   eg: git-stats-pairs Nick
