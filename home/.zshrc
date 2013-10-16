@@ -5,7 +5,7 @@ ZSH_THEME="nixterrimus"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(brew nyan vi-mode bundler)
+plugins=(brew nyan bundler)
 
 source $ZSH/oh-my-zsh.sh
 
