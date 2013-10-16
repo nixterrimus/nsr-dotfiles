@@ -1,2 +1,3 @@
 colorscheme tomorrow-night
 highlight clear SignColumn
+let g:ackprg = 'ag --nogroup --nocolor --column'

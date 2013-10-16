@@ -24,7 +24,7 @@ function current_branch() {
 }
 
 # Ack grep is ack
-alias ack="ack-grep"
+alias ack="ag"
 
 # Git aliases
 alias gpull='git pull origin $(current_branch)'
