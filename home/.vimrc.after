@@ -1,7 +1,8 @@
-colorscheme tomorrow-night
 highlight clear SignColumn
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 nnoremap <leader>ea :CtrlP app/assets<cr>
 "set wildignore+=*/tmp/*     " MacOSX/Linux
+
+colorscheme Tomorrow-Night-Eighties
