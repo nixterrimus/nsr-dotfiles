@@ -13,6 +13,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/usr/local/Cellar/android-sdk/r21/tools:/usr/local/Cellar/android-sdk/r21/platform-tools
 export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/local/share/npm/bin/
+export PATH=$PATH:~/bin
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
