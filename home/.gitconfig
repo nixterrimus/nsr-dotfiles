@@ -2,16 +2,19 @@
 	name = Nick Rowe
 	email = nixterrimus@dcxn.com
 [core]
-  excludesfile = /Users/nicholasrowe/.gitignore_global
+	excludesfile = /Users/nicholasrowe/.gitignore_global
 	editor = vim
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [alias]
   co = checkout
   st = status
   recent = !git for-each-ref --count=35 --sort=-committerdate refs/heads/ --format='%(refname:short)!%(authorname)!%(committerdate:short)' | rs -zc! 35 3
   changed = whatchanged --abbrev-commit --pretty=format:'%h %cn: %s'
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
 
 [log]
   abbrevCommit = true
@@ -19,3 +22,15 @@
 	tool = opendiff
 [github]
 	user = nixterrimus
+[mergetool]
+	keepBackup = false
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+#driver for merging XCode project files
+[mergetool "mergepbx"]
+    cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

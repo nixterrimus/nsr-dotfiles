@@ -31,11 +31,12 @@ alias ack="ag"
 # Git aliases
 alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
-alias gmerge='git co master; git pull origin master; git co -; git merge master'
-alias gbranch='git checkout -b'
 
 # Git statistics -> Highly dangerous information, treat with caution
 function git-log-contributions { git log --author="\($1\)" --format='%H %ad [%an]' }
+
+# Log Against master
+function git-log-against-master { git log master..$(current_branch) }
 
 # With no arguments returns the total commits in the project, with an argument returns
 #   total commits for that author
@@ -87,8 +88,7 @@ if type rbenv >/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
 
-alias slow='sudo /usr/local/Cellar/iftop/1.0pre2/sbin/iftop -i en1 -b'
-alias today='~/Code/gcalcli/gcalcli --ignore-started --cal "Rowe" --detail-location agenda'
+alias slow='sudo iftop -i en1 -b'
 alias check-mail='/usr/local/share/python/offlineimap -o -q -u quiet && mutt'
 alias song='youtube-dl --extract-audio --audio-format=mp3 -t'
 alias cask="brew cask"
@@ -105,3 +105,9 @@ alias amazon='w3m http://www.amazon.com/gp/aw/h.html'
 
 bindkey \\C-R history-incremental-search-backward
 bindkey \\C-S history-incremental-search-forward
+
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
