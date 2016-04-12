@@ -4,9 +4,6 @@
 [submodule "home/.janus/tomorrow-night-vim"]
 	path = home/.janus/tomorrow-night-vim
 	url = git://github.com/mnoble/tomorrow-night-vim.git
-[submodule "home/.tmux/tmux-powerline"]
-	path = home/.tmux/tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
 [submodule "home/.janus/vim-powerline"]
 	path = home/.janus/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
