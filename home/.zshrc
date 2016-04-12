@@ -24,6 +24,8 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 # Searching
 alias ag="nocorrect ag"
 alias ack="ag"
@@ -64,11 +66,6 @@ alias git-high-score='git-log-contributions | git-scoreboard | head -n10'
 
 alias be='bundle exec'
 
-# Analytics monitoring
-#   Captures analytics traffic as it moves across the network
-alias ga-monitor="sudo tshark -R 'http.request.full_uri matches \"utm\.gif\"' -T fields -e http.request.full_uri -i en1"
-alias om-monitor="sudo tshark -R 'http.request.full_uri matches \"metric\.modcloth\.com\"' -T fields -e http.request.full_uri -i en1"
-
 # Net testing
 alias wifi-random='sudo spoof-mac randomize wi-fi && spoof-mac list'
 alias wifi-become='sudo spoof-mac set'
@@ -87,6 +84,8 @@ mcd () { mkdir -p "$@" && cd "$@"; }
 if type rbenv >/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
+
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
 alias slow='sudo iftop -i en1 -b'
 alias check-mail='/usr/local/share/python/offlineimap -o -q -u quiet && mutt'
@@ -110,4 +109,6 @@ export GOPATH=$HOME/golang
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+eval $(docker-machine env)
 

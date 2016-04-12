@@ -1,7 +1,17 @@
-let g:Powerline_symbols = 'fancy' 
 set t_Co=256
 
 nmap <CR> :write<CR>
+
+
+" Folding
+nmap <Tab> za
+set foldmethod=syntax
+set foldlevelstart=99
+"set nofoldenable
+
+" Markdown
+
+
 
 set autoread
 
@@ -25,16 +35,6 @@ let NERDTreeMinimalUI = 1
 
 :set mouse=a
 
-func! WordProcessorMode()
-  setlocal formatoptions=1
-  setlocal noexpandtab
-  setlocal wrap
-  setlocal nolist
-  setlocal lbr
-  setlocal linebreak
-endfu
-com! WP call WordProcessorMode()
-
 func! FormatJSON()
   :%!python -m json.tool
 endfu
@@ -45,11 +45,7 @@ set exrc
 set secure
 
 "FOLDING
-"nnoremap <space> za
-"vnoremap <space> zf
 
-"set foldmethod=syntax
 "set foldnestmax=2
-"set foldlevelstart=20
 
 
